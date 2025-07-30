@@ -1,0 +1,20 @@
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none; 
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+
+.cursor-image {
+  width: 150px;
+  height: 150px;
+  transform-origin: top center;
+}

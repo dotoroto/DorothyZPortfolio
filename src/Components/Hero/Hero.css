@@ -1,0 +1,79 @@
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../Assets/forest.jpg");
+    width: 100vw;
+    height:100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.hero img{
+    margin-top: 15vh;
+    width: 15vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero h1{
+    text-align: center;
+    size: 30%;
+    font-size: 4vw;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.about{
+    text-align: center;
+    font-size: 1vw;
+    color: white;
+    width: 50vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-family: "Press Start 2P", system-ui;;
+}
+
+.about p{
+    margin-top: 1vh;
+}
+
+.heroButtons{
+    display: flex;
+    align-items: center;
+    font-size:22px;
+    font-family: "Press Start 2P", system-ui;
+    width: 30vw;
+    height: 15vh;
+    gap: 3.5vw;
+    padding-left: 10vw;
+}
+
+.heroButtons img{
+    width: 4vw;
+    border-radius: 0%;
+    margin-top: 0px;
+}
+
+.LIButton {
+    border: 3px solid black;
+    width: 4vw;
+    height: 4vw;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    padding-left: 5px;
+}
+
+.emailButton, .resumeButton {
+    border: 3px solid black;
+    width: 4vw;
+    height: 4vw;
+}
+
+.emailButton:hover, .resumeButton :hover, .LIButton:hover{
+    border: 3px solid red;
+    width: 4vw;
+    height: 4vw;
+}
