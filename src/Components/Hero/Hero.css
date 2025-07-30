@@ -63,17 +63,34 @@
     align-items: center;
     display: flex;
     background-color: white;
-    padding-left: 5px;
+    text-align: center;
+    justify-content: center;
 }
 
-.emailButton, .resumeButton {
+.emailButton{
     border: 3px solid black;
     width: 4vw;
     height: 4vw;
+    background-image: url("../../Assets/emailLogo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
-.emailButton:hover, .resumeButton :hover, .LIButton:hover{
-    border: 3px solid red;
+.resumeButton{
+    border: 3px solid black;
     width: 4vw;
     height: 4vw;
+    background-image: url("../../Assets/resumeLogo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
+
+.emailButton:hover, .resumeButton:hover, .LIButton:hover{
+    width: 6vw;
+    height: 6vw;
+    margin-top: -1vw;
+}
+

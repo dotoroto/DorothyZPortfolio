@@ -16,12 +16,8 @@ const Hero = () => {
             </div>
             <div className="heroButtons">
                 <div className="LIButton">in</div>
-                <div className="emailButton">
-                    <img src={emailLogo} alt="email"/>
-                </div>
-                <div className="resumeButton">
-                    <img src={resumeLogo} alt="resume"/>
-                </div>
+                <div className="emailButton"/>
+                <div className="resumeButton"/>
             </div>
         </div>
     )

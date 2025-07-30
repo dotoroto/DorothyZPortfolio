@@ -11,7 +11,7 @@ const CustomCursor = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
-      const angle = 1.3*(clientX - lastPosition.current.x);
+      const angle = (clientX - lastPosition.current.x);
 
       setPosition({x:clientX, y:clientY });
       setTilt(angle);
@@ -32,8 +32,8 @@ const CustomCursor = () => {
       }}
       transition={{
         type: "spring",
-        stiffness: 100,
-        damping: 20,
+        stiffness: 500,
+        damping: 100,
       }}>
       <img src={lantern} alt="Lantern Cursor" className="cursor-image"/>
     </motion.div>
