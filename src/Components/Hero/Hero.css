@@ -2,13 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url("../../Assets/forest.jpg");
     width: 100vw;
     height:100vh;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
 }
 .hero img{
     margin-top: 15vh;
@@ -57,7 +52,7 @@
 }
 
 .LIButton {
-    border: 3px solid black;
+    border: 5px solid black;
     width: 4vw;
     height: 4vw;
     align-items: center;
@@ -68,17 +63,18 @@
 }
 
 .emailButton{
-    border: 3px solid black;
+    border: 5px solid black;
     width: 4vw;
     height: 4vw;
     background-image: url("../../Assets/emailLogo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+    image-rendering: pixelated;
 }
 
 .resumeButton{
-    border: 3px solid black;
+    border: 5px solid black;
     width: 4vw;
     height: 4vw;
     background-image: url("../../Assets/resumeLogo.jpg");
@@ -86,6 +82,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+    image-rendering: pixelated;
 }
 
 .emailButton:hover, .resumeButton:hover, .LIButton:hover{
@@ -94,3 +91,22 @@
     margin-top: -1vw;
 }
 
+.downArrow{
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../Assets/downArrow.png");
+    width: 5vw;
+    height:8vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    image-rendering: pixelated;
+}
+
+.downArrow:hover{
+    width: 6vw;
+    height: 10vh;
+}

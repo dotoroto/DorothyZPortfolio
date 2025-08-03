@@ -11,7 +11,7 @@ const CustomCursor = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
-      const angle = (clientX - lastPosition.current.x);
+      const angle = (clientX - lastPosition.current.x); //based on velocity
 
       setPosition({x:clientX, y:clientY });
       setTilt(angle);
