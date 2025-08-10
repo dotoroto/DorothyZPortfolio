@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css"
 import pixelHeadshot from "../../Assets/pixelHeadshot.jpg"
-import { motion, useSpring } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({scroll}) => {
 
 
     return(

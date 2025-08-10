@@ -1,9 +1,17 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 #root {
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
+.main{
+  height: 100vh;
+  position: relative;
+}
 .background{
   width: 100vw;
   height:100vh;
@@ -12,7 +20,7 @@
   background-position: center;
   background-repeat: no-repeat; 
   image-rendering: pixelated;
-  position: absolute;
+  position: fixed;
   z-index: -2;
   padding: 0;
   margin: 0;

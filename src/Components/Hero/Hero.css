@@ -60,6 +60,7 @@
     background-color: white;
     text-align: center;
     justify-content: center;
+    transition: 0.3s;
 }
 
 .emailButton{
@@ -71,6 +72,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     image-rendering: pixelated;
+    transition: 0.3s;
 }
 
 .resumeButton{
@@ -83,6 +85,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     image-rendering: pixelated;
+    transition: 0.3s;
 }
 
 .emailButton:hover, .resumeButton:hover, .LIButton:hover{
@@ -104,6 +107,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     image-rendering: pixelated;
+    transition: 0.3s;
 }
 
 .downArrow:hover{
