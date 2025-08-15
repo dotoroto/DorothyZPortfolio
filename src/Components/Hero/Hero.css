@@ -15,14 +15,14 @@
 .hero h1{
     text-align: center;
     size: 30%;
-    font-size: 4vw;
+    font-size: 60px;
     color: white;
     font-family: "Archivo Black", sans-serif;
 }
 
 .about{
     text-align: center;
-    font-size: 1vw;
+    font-size: 15px;
     color: white;
     width: 50vw;
     margin-top: 3vh;
@@ -60,7 +60,7 @@
     background-color: white;
     text-align: center;
     justify-content: center;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .emailButton{
@@ -72,7 +72,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     image-rendering: pixelated;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .resumeButton{
@@ -85,7 +85,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     image-rendering: pixelated;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .emailButton:hover, .resumeButton:hover, .LIButton:hover{
