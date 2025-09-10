@@ -19,12 +19,11 @@ const LightSource = ({scrollProgress}) => {
   useFrame(() => {
     ref.current.position.x = (mouse.current.x - window.innerWidth / 2)*0.002;
     ref.current.position.y = 2 - (mouse.current.y - window.innerHeight / 2)*0.005;
-    ref.current.position.z = 5 - scrollProgress.get() * 4;
+    ref.current.position.z = 3 - scrollProgress.get() * 4;
   });
 
   return (
-    
-    <pointLight ref={ref} intensity={30} color="#ffffffff" distance={0}/>
+    <pointLight ref={ref} intensity={25} color="#ffffffff" distance={0}/>
   );
 };
 

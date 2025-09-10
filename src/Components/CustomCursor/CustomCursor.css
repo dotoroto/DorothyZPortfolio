@@ -1,7 +1,7 @@
 .custom-cursor {
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     pointer-events: none; 
     z-index: 9999;
     display: flex;
@@ -14,7 +14,9 @@
 
 
 .cursor-image {
-  width: 150px;
-  height: 150px;
-  transform-origin: top center;
+  width: 100px;
+  height: 100px;
+  transform-origin:center;
+  margin-top: -5vh;
+  filter: drop-shadow(0 -50px 40px rgba(226, 255, 82, 0.8));
 }

@@ -19,58 +19,59 @@
     width: 100%;
 }
 
-.project{
+.experiences{
     border: white 2px solid;
     margin-top: 5vw;
     height: 50vh;
-    width: 60vw;
+    width: 25vw;
     align-items: center;
     display: flex;
     box-shadow: 0px 0px 10px 2px white;
-    overflow: hidden;
-    border-radius: 3%;
-}
-
-.projectImg{
-    width: 24vw;
-    height: 50vh;
-    overflow: hidden;
-}
-
-.projectImg img{
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-}
-
-.description{
-    width: 36vw;
-    height: 50vh;
     overflow: auto;
+    border-radius: 3%;
     background-color: rgba(255, 255, 255, 0.7);
-    transition: opacity 2.0s ease-in-out;
+    flex-direction: column;
 }
 
-.description::-webkit-scrollbar-track{
-    display: show;
-    scrollbar-width: 2vw;
-    scrollbar-color: red;
-}
-.description h2{
+.experiences h2{
     padding-top: 5vh;
     color: black;
     font-size:20px;
     font-family: "Press Start 2P", system-ui;
 }
 
-.description p{
-    padding-top: 5vh;
+.experiences p{
+    padding-top: 1vh;
     color: black;
-    font-size:12px;
+    font-size:8px;
     font-family: "Press Start 2P", system-ui;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    line-height: 1.5;
+}
+
+
+.role{
     text-align: left;
-    padding-left: 2vw;
-    padding-right: 2vw;
+}
+
+.role p{
+    padding-top: 0;
+    color: black;
+    font-size:8px;
+    font-family: "Press Start 2P", system-ui;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    line-height: 1.5;
+}
+
+.role li{
+    padding-top: 0vh;
+    color: black;
+    font-size:8px;
+    font-family: "Press Start 2P", system-ui;
+    margin-left: 2vw;
+    margin-right: 1vw;
     line-height: 1.5;
 }
 
@@ -115,10 +116,5 @@
 
 #right{
     transform: rotate(-90deg);
-}
-
-.projectImg img,
-.description {
-  opacity: 1;
-  transition: opacity 0.6s ease-in-out;
+    margin-left: 1vw;
 }

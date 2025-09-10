@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import lantern from "../../Assets/lantern.png"
+import lantern from "../../Assets/torch.png"
 import "./CustomCursor.css";
 
 const CustomCursor = () => {

@@ -3,11 +3,11 @@ import './App.css';
 import Hero from "./Components/Hero/Hero.jsx";
 import CustomCursor from './Components/CustomCursor/CustomCursor.jsx';
 import Projects from './Components/Projects/Projects.jsx';
+import Experiences from "./Components/Experiences/Experiences.jsx";
 import MyModel from "./Components/MyModel/MyModel.jsx";
 import LightSource from "./Components/MyModel/LightSource.jsx";
 import { Canvas } from "@react-three/fiber";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { AmbientLight } from "three";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -15,8 +15,11 @@ export default function App() {
   const heroScale = useTransform(scrollYProgress, [0, 0.1], [1, 2]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
-  const projectsScale = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [0.5, 1, 2]);
-  const projectsOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [0, 1, 0]);
+  const projectsScale = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.25, 0.35], [0, 0, 1, 1, 3]);
+  const projectsOpacity = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.25, 0.35], [0, 0, 1, 1, 0]);
+
+  const experiencesScale = useTransform(scrollYProgress, [0, 0.3, 0.4, 0.45, 0.55], [0, 0, 1, 1, 3]);
+  const experiencesOpacity = useTransform(scrollYProgress, [0, 0.3, 0.4, 0.45, 0.55], [0, 0, 1, 1, 0]);
 
   return (
     <div style={{ height: "500vh", position: "relative" }}>
@@ -57,6 +60,19 @@ export default function App() {
           zIndex: 1,
         }}>
         <Projects />
+      </motion.section>
+
+      <motion.section id="experiences"
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          scale: experiencesScale,
+          opacity: experiencesOpacity,
+          zIndex: 1,
+        }}>
+        <Experiences />
       </motion.section>
     </div>
   );
