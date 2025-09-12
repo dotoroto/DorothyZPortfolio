@@ -12,7 +12,7 @@ const Hero = ({scroll}) => {
             <h1>Dorothy Zheng</h1>
             <div className="about">
                 <p>CS @ UToronto</p>
-                <p>National Scholarship Finalist</p>
+                <p>Please Hire Me</p>
             </div>
             <div className="heroButtons">
                 <div className="LIButton" onClick={() => window.open("https://www.linkedin.com/in/dorothy-zheng07/", "_blank")} >in</div>
