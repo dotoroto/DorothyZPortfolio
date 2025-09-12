@@ -1,0 +1,11 @@
+Model Information:
+* title:	A Minecraft Village
+* source:	https://sketchfab.com/3d-models/a-minecraft-village-bf85ea1752554fb98a1531742fca8be1
+* author:	Adventure_man1 (https://sketchfab.com/Adventure_man1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A Minecraft Village" (https://sketchfab.com/3d-models/a-minecraft-village-bf85ea1752554fb98a1531742fca8be1) by Adventure_man1 (https://sketchfab.com/Adventure_man1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

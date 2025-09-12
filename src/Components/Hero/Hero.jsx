@@ -15,9 +15,9 @@ const Hero = ({scroll}) => {
                 <p>National Scholarship Finalist</p>
             </div>
             <div className="heroButtons">
-                <div className="LIButton">in</div>
-                <div className="emailButton"/>
-                <div className="resumeButton"/>
+                <div className="LIButton" onClick={() => window.open("https://www.linkedin.com/in/dorothy-zheng07/", "_blank")} >in</div>
+                <div className="emailButton"  onClick={() => window.location.href = "mailto:dorothy.zheng07@gmail.com"} />
+                <div className="resumeButton" onClick={() => window.open("/DorothyZResume.pdf", "_blank")} />
             </div>
         </div>
     )
