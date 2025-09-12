@@ -19,7 +19,7 @@ const LightSource = ({scrollProgress}) => {
   useFrame(() => {
     ref.current.position.x = (mouse.current.x - window.innerWidth / 2)*0.005;
     ref.current.position.y = (mouse.current.y - window.innerHeight / 2)*0.003;
-    ref.current.position.z = 5-scrollProgress.get() * 10;
+    ref.current.position.z = 3.5-scrollProgress.get() * 10;
   });
 
   return (
