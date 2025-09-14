@@ -12,11 +12,11 @@ const Hero = ({scroll}) => {
             <h1>Dorothy Zheng</h1>
             <div className="about">
                 <p>CS @ UToronto</p>
-                <p>Please Hire Me</p>
+                <p>National Scholarship Finalist</p>
             </div>
             <div className="heroButtons">
                 <div className="LIButton" onClick={() => window.open("https://www.linkedin.com/in/dorothy-zheng07/", "_blank")} >in</div>
-                <div className="emailButton"  onClick={() => window.location.href = "mailto:dorothy.zheng07@gmail.com"} />
+                <div className="emailButton"  onClick={() => window.open("mailto:dorothy.zheng07@gmail.com", "_blank")} />
                 <div className="resumeButton" onClick={() => window.open("/DorothyZResume.pdf", "_blank")} />
             </div>
         </div>

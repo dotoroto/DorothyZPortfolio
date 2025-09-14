@@ -26,7 +26,7 @@ const Model = ({ scrollProgress }) => {
     const progress = scrollProgress.get();
     camera.position.z = 3 - progress * 10;
     camera.rotation.y = -(mouse.current.x - window.innerWidth / 2) * 0.0005;
-    camera.rotation.x = -(mouse.current.y - window.innerHeight / 2) * 0.0003;
+    camera.rotation.x = -0.1-(mouse.current.y - window.innerHeight / 2) * 0.0003;
     camera.updateProjectionMatrix();
 
     //modelRef.current.rotation.y = (mouse.current.x - window.innerWidth / 2) * 0.0001;
