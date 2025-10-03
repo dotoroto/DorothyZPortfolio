@@ -1,3 +1,13 @@
+/*
+To-Do
+- Side bar
+- Pictures for experiences
+- More images for projects
+- Minecraft themed assets
+- Footer
+
+*/ 
+
 import React, { Suspense } from "react";
 import './App.css';
 import Hero from "./Components/Hero/Hero.jsx";
