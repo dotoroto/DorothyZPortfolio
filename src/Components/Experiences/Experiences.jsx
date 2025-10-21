@@ -39,7 +39,8 @@ const Experiences = ({scroll}) => {
                     "Canadian Intermediate Math Competition ’23 Top 1%",
                     "Galois ‘23 Top 1%"
                 ]
-            }
+            },
+            {}, {}, {}, {}
             ],
             images: []
         },

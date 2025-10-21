@@ -6,6 +6,7 @@ import musixImg from "../../Assets/musixImg.png";
 import rhythmImg from "../../Assets/octaveImg.png";
 import asteroidsImg from "../../Assets/asteroidsImg.png";
 import paintImg from "../../Assets/paintImg.png";
+import ASLingo from "../../Assets/ASLingo.png";
 
 const Projects = ({scroll}) => {
 
@@ -14,6 +15,12 @@ const Projects = ({scroll}) => {
             title: "Bionic Arm",
             description: "Programmed and engineered a novel prosthetic bionic arm utilizing surface electromyography (sEMG) controls. Primary contributions include programming & developing a custom signal processing algorithm to filter noise from sEMGs. Won Gold, Sanofi Biogenius Canada Award, Best Engineering Award, Persuasive Scientific Writing Award, Inovation Award, and a University of Ottawa $2000 Entrance Scholarship",
             image: armImg,
+            link: ""
+        },
+        {
+            title: "ASLingo - The Smart Learning Platform",
+            description: "Co-developed ASLingo, an AI-powered web platform that teaches American Sign Language (ASL) through real-time gesture feedback and interactive lessons. Built a React.js frontend integrated with Auth0 authentication and a Node/Express.js backend, connected to MongoDB for user data and progress tracking. Trained a custom PyTorch sequence model using MediaPipe and OpenCV to classify ASL gestures and generate human-readable coaching tips (e.g., “move right hand higher”).",
+            image: ASLingo,
             link: ""
         },
         {
