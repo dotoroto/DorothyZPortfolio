@@ -25,3 +25,14 @@
   padding: 0;
   margin: 0;
 }
+.created{
+  font-size:10px;
+  position: fixed;
+  z-index: 100;
+
+  text-align: center;
+  color: white;
+  margin-top: 95vh;
+  margin-left: 2vw;
+  font-family: "Press Start 2P", system-ui;
+}

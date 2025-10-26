@@ -16,9 +16,10 @@ const Hero = ({scroll}) => {
             </div>
             <div className="heroButtons">
                 <div className="LIButton" onClick={() => window.open("https://www.linkedin.com/in/dorothy-zheng07/", "_blank")} >in</div>
+                <div className="githubButton" onClick={() => window.open("https://github.com/dotoroto", "_blank")} />
                 <div className="emailButton"  onClick={() => window.open("mailto:dorothy.zheng07@gmail.com", "_blank")} />
                 <div className="resumeButton" onClick={() => window.open("/DorothyZResume.pdf", "_blank")} />
-            </div>
+            </div> 
         </div>
     )
 }

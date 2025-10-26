@@ -45,7 +45,7 @@
     width: 30vw;
     height: 15vh;
     gap: 3.5vw;
-    padding-left: 10vw;
+    padding-left: 1vw;
 }
 
 .heroButtons img{
@@ -91,7 +91,20 @@
     transition: 0.1s;
 }
 
-.emailButton:hover, .resumeButton:hover, .LIButton:hover{
+.githubButton{
+    border: 5px solid black;
+    width: 4vw;
+    height: 4vw;
+    background-image: url("../../Assets/githubLogo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    image-rendering: pixelated;
+    transition: 0.1s;
+}
+
+.emailButton:hover, .resumeButton:hover, .githubButton:hover, .LIButton:hover{
     width: 6vw;
     height: 6vw;
     margin-top: -1vw;

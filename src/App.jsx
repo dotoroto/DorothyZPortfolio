@@ -33,6 +33,7 @@ export default function App() {
 
   return (
     <div style={{ height: "500vh", position: "relative" }}>
+      <p className="created">Programmed by Dorothy Zheng</p>
       <div className="background" />
       <Canvas
         style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
@@ -85,5 +86,6 @@ export default function App() {
         <Experiences />
       </motion.section>
     </div>
+    
   );
 }
