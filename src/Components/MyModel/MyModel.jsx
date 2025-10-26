@@ -11,8 +11,10 @@ const Model = ({ scrollProgress }) => {
   const { camera } = useThree();
 
   const mouse = useRef({ x: 0, y: 0 });
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
+    if (isMobile) { return }
     const handleMouseMove = (e) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
@@ -23,7 +25,8 @@ const Model = ({ scrollProgress }) => {
   }, []);
 
   useFrame(() => {
-    const progress = scrollProgress.get();
+    if (isMobile) { return }
+    const progress = Math.min(Math.max(scrollProgress.get(), 0), 1);;
     camera.position.z = 3 - progress * 10;
     camera.rotation.y = -(mouse.current.x - window.innerWidth / 2) * 0.0005;
     camera.rotation.x = -0.1-(mouse.current.y - window.innerHeight / 2) * 0.0003;

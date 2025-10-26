@@ -109,3 +109,47 @@
     height: 6vw;
     margin-top: -1vw;
 }
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding-top: 10vh;
+    }
+
+    .hero img {
+        width: 40vw;
+        height: 40vw;
+        margin-top: 5vh;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        padding: 0 5vw;
+    }
+
+    .about {
+        width: 80vw;
+        font-size: 10px;
+    }
+
+    .heroButtons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6vw;
+        width: 80vw;
+        height: auto;
+    }
+
+    .LIButton, .emailButton, .resumeButton, .githubButton {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .emailButton:hover, .resumeButton:hover, .githubButton:hover, .LIButton:hover {
+        width: 16vw;
+        height: 16vw;
+        margin-top: 0;
+    }
+}

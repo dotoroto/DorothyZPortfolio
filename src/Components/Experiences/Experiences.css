@@ -118,3 +118,61 @@
     transform: rotate(-90deg);
     margin-left: 1vw;
 }
+
+
+@media (max-width: 768px) {
+    .page {
+        margin-top: 0;
+        height: auto;
+        padding-bottom: 10vh;
+    }
+
+    .page h1 {
+        font-size: 20px;
+        padding-left: 5vw;
+        padding-top: 5vh;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .experiences {
+        width: 80vw;
+        height: auto;
+        margin-top: 5vh;
+        box-shadow: 0px 0px 5px 1px white;
+    }
+
+    .experiences h2 {
+        font-size: 14px;
+        padding-top: 3vh;
+    }
+
+    .experiences p,
+    .role p,
+    .role li {
+        font-size: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .arrow {
+        width: 15vw;
+        height: 10vh;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .arrow img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .arrow img:hover {
+        width: 12vw;
+        height: 12vw;
+    }
+}

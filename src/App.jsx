@@ -30,9 +30,13 @@ export default function App() {
 
   const experiencesScale = useTransform(scrollYProgress, [0, 0.3, 0.4, 0.45, 0.55], [0, 0, 1, 1, 3]);
   const experiencesOpacity = useTransform(scrollYProgress, [0, 0.3, 0.4, 0.45, 0.55], [0, 0, 1, 1, 0]);
-
+  
+  const isMobile = window.innerWidth < 768;
   return (
-    <div style={{ height: "500vh", position: "relative" }}>
+    
+      
+    <div style={{ height: isMobile ? "500vh" : "500vh", position: "relative" }}>
+
       <p className="created">Programmed by Dorothy Zheng</p>
       <div className="background" />
       <Canvas

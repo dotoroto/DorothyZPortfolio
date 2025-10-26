@@ -20,3 +20,9 @@
   margin-top: -5vh;
   filter: drop-shadow(0 -50px 40px rgba(226, 255, 82, 0.8));
 }
+
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none !important;
+    }
+}

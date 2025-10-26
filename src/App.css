@@ -36,3 +36,45 @@
   margin-left: 2vw;
   font-family: "Press Start 2P", system-ui;
 }
+
+@media (max-width: 768px) {
+  #root {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main {
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 8vh;
+  }
+
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .created {
+    font-size: 9px;
+    position: fixed;
+    bottom: 2vh;
+    left: 2vw;
+    z-index: 100;
+    text-align: left;
+    color: white;
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+  }
+
+}
