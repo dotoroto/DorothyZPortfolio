@@ -1,27 +1,46 @@
-import React, { useEffect, useState } from "react";
-import "./Hero.css"
-import pixelHeadshot from "../../Assets/headshot.jpg"
+import "./Hero.css";
+import { heroContent } from "../../data/portfolioData";
+import useMouseParallax from "../../hooks/useMouseParallax";
 
-const Hero = ({scroll}) => {
+const Hero = () => {
+  const { parallaxProps } = useMouseParallax({
+    rotateX: 8,
+    rotateY: 8,
+    scale: 1.01,
+    zoom: 0.03,
+  });
 
-
-    return(
-
-        <div className="hero">
-            <img src={pixelHeadshot} alt="Dorothy Zheng"/>
-            <h1>Dorothy Zheng</h1>
-            <div className="about">
-                <p>CS @ UToronto</p>
-                <p>National Scholarship Finalist</p>
-            </div>
-            <div className="heroButtons">
-                <div className="LIButton" onClick={() => window.open("https://www.linkedin.com/in/dorothy-zheng07/", "_blank")} >in</div>
-                <div className="githubButton" onClick={() => window.open("https://github.com/dotoroto", "_blank")} />
-                <div className="emailButton"  onClick={() => window.open("mailto:dorothy.zheng07@gmail.com", "_blank")} />
-                <div className="resumeButton" onClick={() => window.open("/DorothyZResume.pdf", "_blank")} />
-            </div> 
+  return (
+    <div className="hero">
+      <div className="heroCard" {...parallaxProps}>
+        <img src={heroContent.image} alt={heroContent.name} />
+        <h1>{heroContent.name}</h1>
+        <div className="about">
+          {heroContent.about.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
         </div>
-    )
-}
+        <div className="heroButtons">
+          {heroContent.links.map((link) => (
+            <button
+              key={link.label}
+              type="button"
+              className={link.className}
+              onClick={() => window.open(link.href, "_blank", "noopener,noreferrer")}
+              aria-label={link.label}
+              style={
+                link.type === "icon"
+                  ? { backgroundImage: `url(${link.icon})` }
+                  : undefined
+              }
+            >
+              {link.type === "text" ? link.text : null}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Hero;

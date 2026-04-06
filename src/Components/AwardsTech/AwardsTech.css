@@ -1,0 +1,97 @@
+.awardsSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.awardsHeading {
+  position: absolute;
+  top: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Press Start 2P", system-ui;
+  width: auto;
+  padding: 0;
+  z-index: 1;
+}
+.awardsGrid {
+  width: min(66vw, 920px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+.awardCard {
+  min-height: 20vh;
+  padding: 1rem;
+  border: white 2px solid;
+  border-radius: 3%;
+  background-color: rgb(255 255 255 / 70%);
+  box-shadow: 0 0 10px 2px white;
+  backdrop-filter: blur(1px);
+  text-align: left;
+}
+
+.awardCard h2 {
+  color: black;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  margin-bottom: 0.6rem;
+}
+
+.awardCard p {
+  color: black;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.52rem;
+  line-height: 1.6;
+}
+
+.awardDate {
+  color: rgb(97 97 97) !important;
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .awardsSection {
+    height: 100dvh;
+    padding: 3vh 0;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+  }
+
+  .awardsHeading {
+    position: static;
+    transform: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .awardsGrid {
+    width: 88vw;
+    height: 74dvh;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    overflow: auto;
+  }
+
+  .awardCard {
+    min-height: auto;
+  }
+
+  .awardCard h2 {
+    font-size: 0.68rem;
+  }
+
+  .awardCard p {
+    font-size: 0.52rem;
+  }
+}

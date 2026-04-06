@@ -1,0 +1,268 @@
+.techSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.techstackh1 {
+  position: absolute;
+  top: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Press Start 2P", system-ui;
+  width: auto;
+  padding: 0;
+  z-index: 1;
+}
+
+
+.techScene {
+  width: min(82vw, 980px);
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.techTitleBlock {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.techSceneMobile {
+  justify-content: space-evenly;
+}
+
+.techMobileCard {
+  width: 88vw;
+  max-height: 70dvh;
+  padding: 1rem;
+  border: white 2px solid;
+  border-radius: 3%;
+  background-color: rgb(255 255 255 / 70%);
+  box-shadow: 0 0 10px 2px white;
+  backdrop-filter: blur(1px);
+  text-align: left;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.techMobileCard h2 {
+  color: black;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+}
+
+.techMobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.techMobileList p {
+  color: black;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.54rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.techCursorTooltip {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1200;
+  padding: 0.42rem 0.58rem;
+  color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.44rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  background: rgb(20 4 32 / 94%);
+  border: 2px solid rgb(112 84 158 / 96%);
+  box-shadow:
+    0 0 0 2px rgb(44 22 59 / 92%),
+    3px 3px 0 rgb(0 0 0 / 45%);
+  transform: translate3d(0, 4px, 0);
+  transition:
+    opacity 0.08s ease,
+    transform 0.08s ease;
+}
+
+.techCursorTooltip.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.techOverline,
+.techIntro,
+.techSlotLabel,
+.techSlotValue,
+.techTitleBlock h2 {
+  font-family: "Press Start 2P", system-ui;
+}
+
+.techOverline {
+  color: rgb(255 219 138);
+  font-size: 0.55rem;
+  margin-bottom: 0.7rem;
+}
+
+.techTitleBlock h2 {
+  color: white;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.techIntro {
+  color: rgb(238 231 207);
+  font-size: 0.56rem;
+  line-height: 1.8;
+  max-width: 34rem;
+}
+
+.techInventory {
+  display: none;
+}
+
+.techInventoryBoard {
+  width: min(68vw, 760px);
+  aspect-ratio: 530 / 330;
+  position: relative;
+  overflow: visible;
+  background-image: url("../../Assets/Inventory.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 18px 30px rgb(0 0 0 / 32%));
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.techInventoryGrid {
+  position: absolute;
+  left: 50%;
+  top: 61%;
+  transform: translate(-50.5%, -50%);
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.5rem 0.5rem;
+  overflow: visible;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+
+.techSlot {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  background: rgb(0 0 0/ 0%);
+  overflow: visible;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.techSlotGlyph {
+  color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-size: clamp(0.45rem, 0.8vw, 0.72rem);
+  line-height: 1;
+  text-shadow:
+    2px 2px 0 rgb(0 0 0 / 70%),
+    0 0 10px rgb(0 0 0 / 35%);
+  transform: translateY(-1px);
+}
+
+.techSlot--redstone .techSlotGlyph {
+  color: rgb(255 121 121);
+}
+
+.techSlot--emerald .techSlotGlyph {
+  color: rgb(92 255 178);
+}
+
+.techSlot--diamond .techSlotGlyph {
+  color: rgb(132 239 255);
+}
+
+.techSlot--gold .techSlotGlyph {
+  color: rgb(255 222 116);
+}
+
+.techSlot--iron .techSlotGlyph {
+  color: rgb(232 232 232);
+}
+
+.techSlot--lapis .techSlotGlyph {
+  color: rgb(126 157 255);
+}
+
+@media (max-width: 768px) {
+  .techSection {
+    height: 100dvh;
+    padding: 3vh 0;
+    box-sizing: border-box;
+  }
+
+  .techScene {
+    width: 92vw;
+    height: 74dvh;
+  }
+
+  .techTitleBlock {
+    margin-bottom: 1rem;
+  }
+
+  .techstackh1Mobile {
+    position: static;
+    transform: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .techTitleBlock h2 {
+    font-size: 0.9rem;
+  }
+
+  .techOverline,
+  .techIntro {
+    font-size: 0.48rem;
+  }
+
+  .techInventoryBoard {
+    width: min(92vw, 760px);
+    max-width: 92vw;
+  }
+
+  .techMobileCard {
+    min-height: 0;
+  }
+
+  .techInventoryGrid {
+    width: 79%;
+    gap: 0.65rem 0.55rem;
+  }
+
+  .techSlotGlyph {
+    font-size: clamp(0.35rem, 1.8vw, 0.56rem);
+  }
+
+  .techCursorTooltip {
+    font-size: 0.38rem;
+    max-width: 7.5rem;
+    white-space: normal;
+  }
+}

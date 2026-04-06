@@ -1,155 +1,162 @@
-.hero{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height:100vh;
-}
-.hero img{
-    margin-top: 15vh;
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%;
-    object-fit: cover;
-    border: white solid 5px;
-    box-shadow: 0px 0px 20px 5px white;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
-.hero h1{
-    text-align: center;
-    size: 30%;
-    font-size: 60px;
-    color: white;
-    font-family: "Archivo Black", sans-serif;
+.heroCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: min(72vw, 860px);
+  padding: 3rem 2rem 2rem;
+  border: 2px solid rgb(255 255 255 / 70%);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(248, 248, 248, 0.25));
+  box-shadow: 0 0 24px rgb(255 255 255 / 18%);
 }
 
-.about{
-    text-align: center;
-    font-size: 15px;
-    color: white;
-    width: 50vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    font-family: "Press Start 2P", system-ui;
+.heroCard > img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  object-fit: cover;
+  border: white solid 5px;
+  box-shadow: 0 0 20px 5px white;
 }
 
-.about p{
-    margin-top: 1.5vh;
+.hero h1 {
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
 }
 
-.heroButtons{
-    display: flex;
-    align-items: center;
-    font-size:22px;
-    font-family: "Press Start 2P", system-ui;
-    width: 30vw;
-    height: 15vh;
-    gap: 3.5vw;
-    padding-left: 1vw;
+.about {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  width: 50vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-family: "Press Start 2P", system-ui;
 }
 
-.heroButtons img{
-    width: 4vw;
-    border-radius: 0%;
-    margin-top: 0px;
+.about p {
+  margin-top: 1.5vh;
 }
 
-.LIButton {
-    border: 5px solid black;
-    width: 4vw;
-    height: 4vw;
-    align-items: center;
-    display: flex;
-    background-color: white;
-    text-align: center;
-    justify-content: center;
-    transition: 0.1s;
+.heroButtons {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-family: "Press Start 2P", system-ui;
+  width: 30vw;
+  height: 15vh;
+  gap: 3.5vw;
+  padding-left: 1vw;
 }
 
-.emailButton{
-    border: 5px solid black;
-    width: 4vw;
-    height: 4vw;
-    background-image: url("../../Assets/emailLogo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    image-rendering: pixelated;
-    transition: 0.1s;
+.LIButton,
+.emailButton,
+.resumeButton,
+.githubButton {
+  border: 5px solid black;
+  width: 4.5vw;
+  height: 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transition:
+    width 0.1s,
+    height 0.1s,
+    margin 0.1s,
+    transform 0.1s;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 22px;
+  line-height: 1;
 }
 
-.resumeButton{
-    border: 5px solid black;
-    width: 4vw;
-    height: 4vw;
-    background-image: url("../../Assets/resumeLogo.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    image-rendering: pixelated;
-    transition: 0.1s;
+.emailButton:hover,
+.resumeButton:hover,
+.githubButton:hover,
+.LIButton:hover {
+  width: 6vw;
+  height: 6vw;
+  margin-top: -1vw;
+  margin-left: -1vw;
+  margin-right: -1vw;
 }
 
-.githubButton{
-    border: 5px solid black;
-    width: 4vw;
-    height: 4vw;
-    background-image: url("../../Assets/githubLogo.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    image-rendering: pixelated;
-    transition: 0.1s;
+.heroButtons:has(.LIButton:hover) .githubButton,
+.heroButtons:has(.LIButton:hover) .emailButton,
+.heroButtons:has(.LIButton:hover) .resumeButton,
+.heroButtons:has(.githubButton:hover) .emailButton,
+.heroButtons:has(.githubButton:hover) .resumeButton,
+.heroButtons:has(.emailButton:hover) .resumeButton {
+  transform: translateX(1vw);
 }
 
-.emailButton:hover, .resumeButton:hover, .githubButton:hover, .LIButton:hover{
-    width: 6vw;
-    height: 6vw;
-    margin-top: -1vw;
+.heroButtons:has(.githubButton:hover) .LIButton,
+.heroButtons:has(.emailButton:hover) .LIButton,
+.heroButtons:has(.emailButton:hover) .githubButton,
+.heroButtons:has(.resumeButton:hover) .LIButton,
+.heroButtons:has(.resumeButton:hover) .githubButton,
+.heroButtons:has(.resumeButton:hover) .emailButton {
+  transform: translateX(-1vw);
 }
-
 
 @media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding-top: 10vh;
-    }
+  .hero {
+    height: 100dvh;
+    padding-top: 0;
+  }
 
-    .hero img {
-        width: 40vw;
-        height: 40vw;
-        margin-top: 5vh;
-    }
+  .heroCard {
+    width: 84vw;
+    padding: 2rem 1rem 1.5rem;
+  }
 
-    .hero h1 {
-        font-size: 32px;
-        padding: 0 5vw;
-    }
+  .heroCard > img {
+    width: 40vw;
+    height: 40vw;
+  }
 
-    .about {
-        width: 80vw;
-        font-size: 10px;
-    }
+  .hero h1 {
+    font-size: 32px;
+    padding: 0 5vw;
+  }
 
-    .heroButtons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6vw;
-        width: 80vw;
-        height: auto;
-    }
+  .about {
+    width: 80vw;
+    font-size: 10px;
+  }
 
-    .LIButton, .emailButton, .resumeButton, .githubButton {
-        width: 14vw;
-        height: 14vw;
-    }
+  .heroButtons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4vw;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
 
-    .emailButton:hover, .resumeButton:hover, .githubButton:hover, .LIButton:hover {
-        width: 16vw;
-        height: 16vw;
-        margin-top: 0;
-    }
+  .LIButton,
+  .emailButton,
+  .resumeButton,
+  .githubButton {
+    width: 16vw;
+    height: 16vw;
+    font-size: 16px;
+  }
 }

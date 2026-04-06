@@ -10,8 +10,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+    transition: opacity 0.12s ease;
 }
 
+.inventory-hovering .custom-cursor {
+  opacity: 0;
+}
 
 .cursor-image {
   width: 100px;

@@ -8,6 +8,103 @@
   text-align: center;
 }
 
+.appShell {
+  position: relative;
+}
+
+.mobileShell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.mobileStack {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.mobileSection {
+  height: 100dvh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileHeroSection {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.sideNav {
+  position: fixed;
+  top: 50%;
+  left: 2.2vw;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 120;
+}
+
+.sideNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sideNavSquare {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  background: transparent;
+  transition:
+    background-color 0.16s ease,
+    transform 0.16s ease;
+}
+
+.sideNavSquare.active {
+  background: white;
+}
+
+.sideNavItem:hover .sideNavSquare {
+  transform: scale(1.08);
+}
+
+.sideNavLabel {
+  color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 9px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  pointer-events: none;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.sideNavLabel.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sectionLayer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+}
+
 .main{
   height: 100vh;
   position: relative;
@@ -43,6 +140,10 @@
     padding: 0;
   }
 
+  .sideNav {
+    display: none;
+  }
+
   .main {
     height: auto;
     min-height: 100vh;
@@ -76,5 +177,4 @@
     margin: 0;
     font-family: "Press Start 2P", system-ui;
   }
-
 }

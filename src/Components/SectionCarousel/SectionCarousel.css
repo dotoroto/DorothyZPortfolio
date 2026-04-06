@@ -1,0 +1,153 @@
+.sectionPage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sectionPage h1 {
+  position: absolute;
+  top: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Press Start 2P", system-ui;
+  width: auto;
+  padding: 0;
+  z-index: 1;
+}
+
+.sectionContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1vw;
+  transform-style: preserve-3d;
+}
+
+.sectionSelector {
+  position: absolute;
+  bottom: 17vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(78vw, 980px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  z-index: 4;
+}
+
+.sectionSelectorButton {
+  border: 2px solid rgb(255 255 255 / 68%);
+  background: rgb(13 18 33 / 58%);
+  color: white;
+  padding: 0.55rem 0.8rem;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 9px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background-color 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.sectionSelectorButton:hover {
+  transform: translateY(-1px);
+  background: rgb(255 255 255 / 16%);
+}
+
+.sectionSelectorButton.active {
+  background: rgb(255 255 255 / 82%);
+  color: black;
+  border-color: white;
+}
+
+.sectionArrow {
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vw;
+  height: 8vh;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sectionArrow img {
+  image-rendering: pixelated;
+  filter: invert(1);
+  width: 4vw;
+  height: 7vh;
+  transition: 0.1s;
+}
+
+.sectionArrow:hover img {
+  width: 6vw;
+  height: 9vh;
+}
+
+.sectionArrow:active img {
+  opacity: 0.5;
+}
+
+.sectionArrowLeft {
+  transform: rotate(90deg);
+}
+
+.sectionArrowRight {
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  .sectionPage {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 3vh 0;
+    justify-content: space-evenly;
+  }
+
+  .sectionPage h1 {
+    position: static;
+    left: auto;
+    transform: none;
+    margin-bottom: 2vh;
+    font-size: 20px;
+  }
+
+  .sectionContainer {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .sectionSelector {
+    position: static;
+    transform: none;
+    width: 90vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .sectionSelectorButton {
+    font-size: 8px;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .sectionArrow {
+    display: none;
+  }
+}

@@ -1,178 +1,202 @@
-.page{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height:100vh;
-    margin-top: -25vh;
+.experiencesScene {
+  position: relative;
+  width: min(82vw, 1180px);
+  height: min(72vh, 760px);
+  pointer-events: none;
 }
 
-.page h1{
-    /*border: green solid 2px;*/
-    color: white;
-    text-align: left;
-    font-size:35px;
-    font-family: "Press Start 2P", system-ui;
-    gap: 3.5vw;
-    padding-left: 20vw;
-    padding-top: 10vh;
-    width: 100%;
+.sectionContainer:has(.experiencesScene) {
+  position: relative;
+  gap: 1vw;
 }
 
-.experiences{
-    border: white 2px solid;
-    margin-top: 5vw;
-    height: 50vh;
-    width: 25vw;
-    align-items: center;
-    display: flex;
-    box-shadow: 0px 0px 10px 2px white;
-    overflow: auto;
-    border-radius: 3%;
-    background-color: rgba(255, 255, 255, 0.7);
-    flex-direction: column;
+.sectionContainer:has(.experiencesScene) > .sectionArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  margin-top: 0;
+  pointer-events: auto;
 }
 
-.experiences h2{
-    padding-top: 5vh;
-    color: black;
-    font-size:20px;
-    font-family: "Press Start 2P", system-ui;
+.sectionContainer:has(.experiencesScene) > .sectionArrow:first-child {
+  left: calc(50% - 13.5vw - 6.25vw);
 }
 
-.experiences p{
-    padding-top: 1vh;
-    color: black;
-    font-size:8px;
-    font-family: "Press Start 2P", system-ui;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    line-height: 1.5;
+.sectionContainer:has(.experiencesScene) > .sectionArrow:last-child {
+  right: calc(50% - 13.5vw - 6.25vw);
 }
 
-
-.role{
-    text-align: left;
+.experiencesSceneInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.role p{
-    padding-top: 0;
-    color: black;
-    font-size:8px;
-    font-family: "Press Start 2P", system-ui;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    line-height: 1.5;
+.experiencePosterLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.role li{
-    padding-top: 0vh;
-    color: black;
-    font-size:8px;
-    font-family: "Press Start 2P", system-ui;
-    margin-left: 2vw;
-    margin-right: 1vw;
-    line-height: 1.5;
+.experiencePoster {
+  position: absolute;
+  width: 13vw;
+  max-width: 170px;
+  aspect-ratio: 3 / 4;
+  transform-origin: top center;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 1vw;
+.experiencePosterBody {
+  width: 100%;
+  height: 100%;
+  transition: transform 120ms ease-out;
+  transform-origin: top center;
+  transform-style: preserve-3d;
 }
 
-.arrow{
-   margin-top: 2vh;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 5vw;
-    height:8vh;
+.experiencePosterFrame {
+  width: 100%;
+  height: 100%;
+  padding: 0.55rem;
+  background: linear-gradient(180deg, rgb(255 251 237), rgb(222 205 165));
+  border: 3px solid rgb(73 48 11 / 70%);
+  box-shadow: 0 14px 26px rgb(0 0 0 / 28%);
 }
 
-.arrow img{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    image-rendering: pixelated;
-    filter: invert(1);
-    width: 4vw;
-    height: 7vh;
-    transition: 0.1s;
-}
-.arrow img:hover{
-    width: 6vw;
-    height:9vh;
+.experiencePoster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92) contrast(1.05);
 }
 
-.arrow img:active{
-    opacity: 50%;
+.posterString {
+  position: absolute;
+  top: -18vh;
+  left: 50%;
+  width: 2px;
+  height: 18vh;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgb(122 95 56 / 0%), rgb(240 231 184 / 85%));
 }
 
-#left{
-    transform: rotate(90deg);
+.experiences {
+  border: white 2px solid;
+  height: 54vh;
+  width: 27vw;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 0 10px 2px white;
+  overflow: auto;
+  border-radius: 3%;
+  background-color: rgb(255 255 255 / 70%);
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
 
-#right{
-    transform: rotate(-90deg);
-    margin-left: 1vw;
+.experiencesInner {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
 }
 
+.experiences h2 {
+  padding-top: 5vh;
+  color: black;
+  font-size: 20px;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.experiences p {
+  padding-top: 1vh;
+  color: black;
+  font-size: 8px;
+  font-family: "Press Start 2P", system-ui;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  line-height: 1.5;
+}
+
+.role {
+  text-align: left;
+}
+
+.role p {
+  padding-top: 0;
+  color: black;
+  font-size: 8px;
+  font-family: "Press Start 2P", system-ui;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  line-height: 1.5;
+}
+
+.roleTitle {
+  padding-top: 1vh;
+}
+
+.roleDate {
+  color: rgb(97 97 97);
+}
+
+.role li {
+  padding-top: 0;
+  color: black;
+  font-size: 8px;
+  font-family: "Press Start 2P", system-ui;
+  margin-left: 2vw;
+  margin-right: 1vw;
+  line-height: 1.5;
+}
 
 @media (max-width: 768px) {
-    .page {
-        margin-top: 0;
-        height: auto;
-        padding-bottom: 10vh;
-    }
+  .experiencesScene {
+    width: 90vw;
+    height: 68vh;
+    min-height: 68vh;
+    pointer-events: auto;
+  }
 
-    .page h1 {
-        font-size: 20px;
-        padding-left: 5vw;
-        padding-top: 5vh;
-        text-align: center;
-    }
+  .sectionContainer:has(.experiencesScene) {
+    gap: 1.25rem;
+  }
 
-    .container {
-        flex-direction: column;
-        gap: 4vh;
-    }
+  .sectionContainer:has(.experiencesScene) > .sectionArrow {
+    position: static;
+    transform: none;
+  }
 
-    .experiences {
-        width: 80vw;
-        height: auto;
-        margin-top: 5vh;
-        box-shadow: 0px 0px 5px 1px white;
-    }
+  .experiencePoster {
+    display: none;
+  }
 
-    .experiences h2 {
-        font-size: 14px;
-        padding-top: 3vh;
-    }
+  .experiences {
+    width: 82vw;
+    height: 68vh;
+    max-height: none;
+    box-shadow: 0 0 5px 1px white;
+  }
 
-    .experiences p,
-    .role p,
-    .role li {
-        font-size: 10px;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
+  .experiences h2 {
+    font-size: 14px;
+    padding-top: 3vh;
+  }
 
-    .arrow {
-        width: 15vw;
-        height: 10vh;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .arrow img {
-        width: 10vw;
-        height: 10vw;
-    }
-
-    .arrow img:hover {
-        width: 12vw;
-        height: 12vw;
-    }
+  .experiences p,
+  .role p,
+  .role li {
+    font-size: 10px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
 }
