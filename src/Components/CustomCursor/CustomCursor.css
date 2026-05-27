@@ -11,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat; 
     transition: opacity 0.12s ease;
+    transform-origin: 50% 0%;
 }
 
 .inventory-hovering .custom-cursor {
@@ -20,8 +21,8 @@
 .cursor-image {
   width: 100px;
   height: 100px;
-  transform-origin:center;
-  margin-top: -5vh;
+  transform-origin: 50% 6%;
+  margin-top: -0.6rem;
   filter: drop-shadow(0 -50px 40px rgba(226, 255, 82, 0.8));
 }
 
